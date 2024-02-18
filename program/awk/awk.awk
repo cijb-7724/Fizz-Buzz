@@ -1,3 +1,4 @@
+#AWK (GNU Awk 5.0.1)
 BEGIN {
     for (i=1; i<=100; ++i) {
       s = ""
