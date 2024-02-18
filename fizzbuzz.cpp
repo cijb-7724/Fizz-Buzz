@@ -1,3 +1,4 @@
+//C++23(gcc12.2)
 #include <iostream>
 #include <string>
 using namespace std;
