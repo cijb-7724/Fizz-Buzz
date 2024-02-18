@@ -17,5 +17,11 @@ https://ja.wikipedia.org/wiki/Fizz_Buzz
 
 ### Fizz Buzz Checker
 ![checker](data/fizzbuzzChecker.png)
+
 https://komari.co.jp/fizzbuzz/
 で100/100にする
+
+## 1.><>
+fish
+```fish
+```
