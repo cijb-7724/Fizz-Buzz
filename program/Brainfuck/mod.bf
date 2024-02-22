@@ -74,7 +74,8 @@ else { (1) = 0 }
 
 >+<
 0 0/1; 1 0 0 0
-put Yes
+if (1) == 1
+    put "Yes"
 [
     ->-<
     Yes 89 101 115
@@ -90,6 +91,8 @@ put Yes
     Reset
     [-]<[-]<[-]<
 ]
+else
+    put "No"
 >
 [
     -
