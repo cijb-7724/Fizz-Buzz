@@ -15,6 +15,47 @@ dec_(x) : (x)をデクリメント
 booleanization_(x) : (x)を真理値化
 boolean_inversion_(x) : (x)を真理値反転
 
+nを1つの割る数mで割り切れるか判定するために
+n m m x x xのメモリ空間が必要になる
+fizzbuzzをやるために，単純に
+n 3 3 0 0 0 n 5 5 0 0 0 n 15 15 0 0 0
+だけ試す？
+if else はできるけど　現状複数の else if に対応できていない
+(a) (b) (c) (d)という並びで以下をやりたい
+if (a)
+    code
+else if (b)
+    code
+else if (c)
+    code
+else
+    code
+end
+
+(a)=1 (b)=1 (c)=1 (d)=1 で初期化
+(a); (b) (c) (d)
+if (a)
+    m r m r m r m r
+    code
+    l l l l
+else if (b)
+r
+    m r m r m r
+    code
+    l l l
+else if (c)
+r
+    m r m r
+    code
+    l l
+else
+r
+    m r
+    code
+    l
+end
+とすればよい
+
 n k k でn mod kの判定ができる
 ,>+++>+++<<
 n; 3 3
