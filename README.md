@@ -94,7 +94,7 @@ int main() {
 }
 ```
 
-## 8.kotlin
+## 32.Kotlin
 ```kt
 fun main() {
     for (i in 1..100) {
