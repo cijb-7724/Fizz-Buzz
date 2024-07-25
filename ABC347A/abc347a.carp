@@ -258,3 +258,89 @@
   )
   )
 )
+
+--
+
+(defn solve [n k a i]
+    (let
+        (if (< i n)
+            [
+            x_ (Maybe.unsafe-from (nth &a i))
+            x (Maybe.unsafe-from x_)
+            ]
+        )
+        (do
+            (print &(Int.str (+ x 0)))
+            (println " ")
+        )
+    )
+)
+
+
+(defn solve [n k a i]
+    (let [
+        x_ (Maybe.unsafe-from (nth &a 0))
+        x (Maybe.unsafe-from x_)
+        ]
+        (if (< i n)
+            let[
+                x_ (Maybe.unsafe-from (nth &a i))
+                x (Maybe.unsafe-from x_)
+            ]
+            (print &(Int.str (+ x 0)))
+            (println " ")
+        )
+    )
+)
+
+--
+loopまでできた
+(use IO)
+(use String)
+(use Int)
+(use Array)
+
+(defn getnums []
+  (let [ss (get-line)
+        s (words &ss)
+        nums (copy-map &Int.from-string &s)]
+   nums
+  )
+)
+
+(defn solve [n k a i]
+  (if (< i n)
+    (let [x_ (Maybe.unsafe-from (nth &a i))
+          x (Maybe.unsafe-from x_)]
+      (do
+        (print &(Int.str (+ x 0)))
+        (println " ")
+        (solve n k a (inc i))
+      )
+    )
+  )
+)
+
+
+(defn main []
+  (let [
+        nk (getnums)
+        n_ (Maybe.unsafe-from (first &nk))
+        n (Maybe.unsafe-from n_)
+        k_ (Maybe.unsafe-from (last &nk))
+        k (Maybe.unsafe-from k_)
+        a (getnums)
+        x_ (Maybe.unsafe-from (nth &a 0))
+        x (Maybe.unsafe-from x_)
+       ]
+  (do
+    (print &(Int.str (+ n 0)))
+    (println " ")
+    (print &(Int.str (+ k 0)))
+    (println " ")
+    (print &(Int.str (+ x 0)))
+    (println " ")
+    (solve n k a 0)
+  )
+  )
+)
