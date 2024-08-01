@@ -1,3 +1,4 @@
+// C(gcc 12.2.0)
 #include <stdio.h>
 #include <string.h>
 int main() {
