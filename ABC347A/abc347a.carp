@@ -4,21 +4,27 @@
 (use Array)
 
 (defn getnums []
-  (let [ss (get-line)
-        s (words &ss)
-        nums (copy-map &Int.from-string &s)]
-   nums
+  (let
+    [
+      ss (get-line)
+      s (words &ss)
+      nums (copy-map &Int.from-string &s)
+    ]
+    nums
   )
 )
 
 (defn solve [n k a i]
   (if (< i n)
-    (let [x_ (Maybe.unsafe-from (nth &a i))
-          x (Maybe.unsafe-from x_)]
+    (let
+      [
+        x_ (Maybe.unsafe-from (nth &a i))
+        x (Maybe.unsafe-from x_)
+      ]
       (do
         (if (= 0 (mod x k))
-            (println &(Int.str (/ x k)))
-            ()
+          (println &(Int.str (/ x k)))
+          ()
         )
         (solve n k a (inc i))
       )
@@ -28,16 +34,17 @@
 )
 
 (defn main []
-  (let [
-        nk (getnums)
-        n_ (Maybe.unsafe-from (first &nk))
-        n (Maybe.unsafe-from n_)
-        k_ (Maybe.unsafe-from (last &nk))
-        k (Maybe.unsafe-from k_)
-        a (getnums)
-       ]
-  (do
-    (solve n k a 0)
-  )
+  (let
+    [
+      nk (getnums)
+      n_ (Maybe.unsafe-from (first &nk))
+      n (Maybe.unsafe-from n_)
+      k_ (Maybe.unsafe-from (last &nk))
+      k (Maybe.unsafe-from k_)
+      a (getnums)
+    ]
+    (do
+      (solve n k a 0)
+    )
   )
 )

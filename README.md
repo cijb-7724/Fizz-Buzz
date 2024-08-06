@@ -195,8 +195,38 @@ int main() {
        END PROGRAM MAIN.
 ```
 
-## 11.x
-```x
+## 11.Carp
+```Carp
+(use IO)
+(use String)
+(use Int)
+
+(defn fizzbuzz [i n]
+  (if (< i (+ n 1))
+    (do
+      (if (= 0 (mod i 15))
+        (println* "FizzBuzz")
+        (do
+          (if (= 0 (mod i 3))
+            (println* "Fizz")
+            (do
+              (if (= 0 (mod i 5))
+                (println* "Buzz")
+                (println &(Int.str i))
+              )
+            )
+          )
+        )
+      )
+      (fizzbuzz (inc i) n)
+    )
+    ()
+  )
+)
+
+(defn main []
+  (fizzbuzz 1 100)
+)
 ```
 
 ## 12.x
