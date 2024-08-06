@@ -64,6 +64,8 @@ end Program;
 ```
 
 ## 4.Assembly x64
+```Assembly
+```
 
 ## 5.Bash
 ```Bash
@@ -127,16 +129,70 @@ int main() {
 }
 ```
 
-## 8.x
-```x
+## 8.C#
+```C#
+using System;
+
+class Program {
+    static void Main() {
+        int N, K;
+        string input = Console.ReadLine();
+        N = int.Parse(input.Split(' ')[0]);
+        for (int i = 1; i <= N; i++) {
+            string output = "";
+            if (i % 3 == 0) output += "Fizz";
+            if (i % 5 == 0) output += "Buzz";
+            if (output == "") output = i.ToString();
+            Console.WriteLine(output);
+        }
+        K = int.Parse(input.Split(' ')[1]);
+        Console.WriteLine(K);
+    }
+}
 ```
 
-## 9.x
-```x
+## 9.C++
+```C++
+#include <iostream>
+#include <string>
+using namespace std;
+int main() {
+    for (int i=1; i<=100; ++i) {
+        string s = "";
+        if (i % 3 == 0) s += "Fizz";
+        if (i % 5 == 0) s += "Buzz";
+        if (s == "") s += to_string(i);
+        cout << s << endl;
+    }
+}
 ```
 
-## 10.x
-```x
+## 10.COBOL
+```COBOL
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. MAIN.
+       ENVIRONMENT DIVISION.
+       CONFIGURATION SECTION.
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 WORK-AREA.
+       03 disp PIC Z(3).
+       03 I PIC 999.
+       PROCEDURE DIVISION.
+           PERFORM VARYING I FROM 1 BY 1 UNTIL I > 100
+               IF FUNCTION MOD(I, 15) = 0
+                   DISPLAY "FizzBuzz"
+               ELSE IF FUNCTION MOD(I, 3) = 0
+                   DISPLAY "Fizz"
+               ELSE IF FUNCTION MOD(I, 5) = 0
+                   DISPLAY "Buzz"
+               ELSE
+                   COMPUTE disp = I
+                   DISPLAY disp
+               END-IF
+           END-PERFORM.
+           STOP RUN.
+       END PROGRAM MAIN.
 ```
 
 ## 11.x
