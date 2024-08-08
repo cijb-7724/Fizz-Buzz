@@ -242,8 +242,29 @@ int main() {
         i))
 ```
 
-## 13.x
-```x
+## 13.Common Lisp
+```Lisp
+(defun fizzbuzz (n)
+    (when (< n 101)
+        (cond
+            ((= 0 (mod n 15))
+                (write-string "FizzBuzz")
+            )
+            ((= 0 (mod n 3))
+                (write-string "Fizz")
+            )
+            ((= 0 (mod n 5))
+                (write-string "Buzz")
+            )
+            (t
+                (write-string (write-to-string n))
+            )
+        )
+        (terpri)
+        (fizzbuzz (+ 1 n))
+    )
+)
+(fizzbuzz 1)
 ```
 
 ## 14.x
