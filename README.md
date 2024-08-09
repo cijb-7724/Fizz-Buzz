@@ -267,8 +267,21 @@ int main() {
 (fizzbuzz 1)
 ```
 
-## 14.x
-```x
+## 14.Crystal
+```Crystal
+n = (1).to_i
+while n <= 100
+    if n % 15 == 0
+        puts "FizzBuzz"
+    elsif n % 3 == 0
+        puts "Fizz"
+    elsif n % 5 == 0
+        puts "Buzz"
+    else
+        puts n
+    end
+    n += 1
+end
 ```
 
 ## 15.x
