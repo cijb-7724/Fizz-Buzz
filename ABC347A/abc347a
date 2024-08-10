@@ -1,0 +1,11 @@
+import std.stdio;
+
+void main() {
+    int n, k;
+    readf("%d %d\n", &n, &k);
+    int a;
+    for (int i=0; i<n; ++i) {
+      readf("%d ", &a);
+      if (a % k == 0) writeln(a / k);
+    }
+}
