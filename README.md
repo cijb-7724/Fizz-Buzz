@@ -309,8 +309,17 @@ void main() {
 }
 ```
 
-## 17.x
-```x
+## 17.Dart
+```Dart
+import 'Dart:io';
+void main() {
+    for (int n=1; n<=100; ++n) {
+        if (n % 3 == 0) stdout.write('Fizz');
+        if (n % 5 == 0) stdout.write('Buzz');
+        if (n % 3 != 0 && n % 5 != 0) stdout.write(n);
+        print('');
+    }
+}
 ```
 
 ## 18.x
