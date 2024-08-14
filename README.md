@@ -375,8 +375,36 @@ defmodule Main do
 end
 ```
 
-## 20.x
-```x
+## 20.Emacs Lisp
+```Emacs Lisp
+(defun solve (n)
+  (mapcar
+    (lambda (x)
+      (cond
+        ((zerop (mod x 15)) "FizzBuzz")
+        ((zerop (mod x 3))  "Fizz")
+        ((zerop (mod x 5))  "Buzz")
+        (t                  (number-to-string x))
+      )
+    )
+  n
+  )
+)
+(defun main ()
+  (interactive)
+  (let
+    (
+      (n (number-sequence 1 100)) 
+      results
+    )
+    (setq results (solve n))
+    (dolist
+      (result results)
+      (princ (format "%s\n" result))
+    )
+  )
+)
+(main)
 ```
 
 ## 21.x
