@@ -1,0 +1,31 @@
+;Emacs Lisp (Native Compile) (GNU Emacs 28.2)
+(defun read-integer-list ()
+  (let ((input (read-string "")))
+    (mapcar 'string-to-number (split-string input))
+  )
+)
+
+(defun solve (a k)
+  (delq nil
+    (mapcar
+      (lambda (n) (if (zerop (mod n k)) (/ n k) nil))
+      a
+    )
+  )
+)
+
+(defun main ()
+  (interactive)
+  (let* (
+    (nk (read-integer-list))
+    (n (car nk))
+    (k (cadr nk))
+    (a (read-integer-list))
+    (results (solve a k)))
+    (dolist (result results)
+      (princ (format "%d\n" result))
+    )
+  )
+)
+
+(main)
